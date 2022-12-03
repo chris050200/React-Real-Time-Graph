@@ -1,0 +1,201 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+#root, html, body, main {
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+    background: rgb(33, 33, 33);
+    height: 100%;
+    width: 100%;
+    padding: 0rem;
+    margin: 0rem;
+    
+}
+
+/* ============ container styles  ============ */
+
+
+.ChartTheme {
+    /* igr-financial-chart { */
+
+
+        /* zoom-slider's basic variables */
+        --color_semitransparent: rgba(255, 255, 255, 0.06);
+        --color_transparent: rgba(255, 255, 255, 0);
+        --color_001: #FFFFFF;
+        --color_002: #1E1E1E;
+        --color_003: #333333;
+        --color_004: #AAAAAA;
+        --color_005: #444444;
+        --color_006: #888888;
+        --color_007: #212121;
+        --color_008: #272727;
+        --color_009: #1B1B1B;
+        --color_010: #4F4F4F;
+        --color_011: #58358B;  /* accent color for SELECTED/PRESSED/CHECKED elements*/
+        --color_012: #777777;
+        --color_014: #2D2D2D;
+        --color_015: #3C3C3E;
+        --color_016: #DDDDDD;
+        --color_017: #666666;
+        --color_018: #191919;
+        --color_019: #C62828;  /* accent color for ERRORS/NEGATIVE elements*/
+
+        /* range colors; */
+        --color_030: #5A3692;
+        --color_031: #6E42B2;
+        --color_032: #855DC3;
+        --color_033: #9F7FCF;
+        --color_034: #B59DDB;
+        /* series colors; */
+        --color_020: rgba(116, 70, 185, 1.0); /* #7446B9; */
+        --color_021: rgba(159, 179, 40, 1.0); /* #9FB328; */
+        --color_022: rgba(249, 98, 50, 1.0);  /* #F96232; */
+        --color_023: rgba(46, 156, 166, 1.0); /* #2E9CA6; */
+        --color_024: rgba(220, 63, 118, 1.0); /* #DC3F76; */
+        --color_025: rgba(255, 152, 0, 1.0);  /* #FF9800; */
+        --color_026: rgba(63, 81, 181, 1.0);  /* #3F51B5; */
+        --color_027: rgba(67, 156, 71, 1.0);  /* #439C47; */
+        --color_028: rgba(121, 85, 72, 1.0);  /* #795548; */
+        --color_029: rgba(154, 154, 154, 1.0);/* #9A9A9A; */
+        /* fill colors similar to above colors but with 30% opacity */
+        --fills_020: rgba(116, 70, 185, 0.3); /* #7446B9; */
+        --fills_021: rgba(159, 179, 40, 0.3); /* #9FB328; */
+        --fills_022: rgba(249, 98, 50, 0.3);  /* #F96232; */
+        --fills_023: rgba(46, 156, 166, 0.3); /* #2E9CA6; */
+        --fills_024: rgba(220, 63, 118, 0.3); /* #DC3F76; */
+        --fills_025: rgba(255, 152, 0, 0.3);  /* #FF9800; */
+        --fills_026: rgba(63, 81, 181, 0.3);  /* #3F51B5; */
+        --fills_027: rgba(67, 156, 71, 0.3);  /* #439C47; */
+        --fills_028: rgba(121, 85, 72, 0.3);  /* #795548; */
+        --fills_029: rgba(154, 154, 154, 0.3);/* #9A9A9A; */
+
+        /* variables shared between custom properties */
+        --PositiveBrushes: var(--color_020), var(--color_021), var(--color_023), var(--color_026), var(--color_027), var(--color_029);
+        --OverlayBrushes:  var(--fills_020), var(--fills_021), var(--fills_023), var(--fills_026), var(--fills_027), var(--fills_029);
+        --NegativeBrushes: var(--color_019);
+        --BackgroundBrush: rgb(25, 25, 25);
+        --ForegroundBrush: rgba(255, 255, 255, 0.9);
+
+        /* variables shared between multiple custom CSS properties */
+        --ColorSeries: var(--color_020), var(--color_021), var(--color_022), var(--color_023), var(--color_026), var(--color_027), var(--color_029);
+        --ColorBackground: #1E1E1E;
+        --ColorAxisLines:  #666666;
+        --ColorAxisLabels: #AAAAAA;
+        --ColorAxisTitles: #888888;
+
+        /* --volume-brushes: #DC3F76; */
+        /* --volume-outlines: #DC3F76; */
+
+        /* setting custom CSS properties for chart's title/subtitle */
+        --title-text-style: 12px Verdana, arial, sans-serif;
+        --title-text-color: var(--ColorAxisTitles);
+        --title-top-margin: 5px;
+        --subtitle-text-style: 12px Verdana, arial, sans-serif;
+        --subtitle-text-color: var(--ColorAxisTitles);
+
+        /* setting custom CSS properties for axes labels/titles */
+        --x-axis-label-text-style: 12px Verdana, arial, sans-serif;
+        --y-axis-label-text-style: 12px Verdana, arial, sans-serif;
+        --x-axis-label-text-color: var(--ColorAxisLabels);
+        --y-axis-label-text-color: var(--ColorAxisLabels);
+        --x-axis-title-text-color: var(--ColorAxisTitles);
+        --y-axis-title-text-color: var(--ColorAxisTitles);
+        /* --x-axis-title-bottom-margin: 5; */
+        /* --y-axis-title-left-margin: 5; */
+
+        /* setting custom CSS properties for axes gridlines */
+        --x-axis-major-stroke: var(--ColorAxisLines);
+        --y-axis-major-stroke: var(--ColorAxisLines);
+        --x-axis-major-stroke-thickness: 0;
+        --y-axis-major-stroke-thickness: 1;
+        --x-axis-stroke: var(--ColorAxisLines);
+        --y-axis-stroke: var(--ColorAxisLines);
+        --y-axis-stroke-thickness: 0;
+        --x-axis-stroke-thickness: 1;
+
+        /* setting custom CSS properties for axes tickmarks */
+        --x-axis-tick-stroke: var(--ColorAxisLines);
+        --y-axis-tick-stroke: var(--ColorAxisLines);
+        --y-axis-tick-stroke-thickness: 1;
+        --x-axis-tick-stroke-thickness: 1;
+        --x-axis-tick-length: 7.5;
+        --y-axis-tick-length: 0;
+
+        /* setting regular CSS properties supported by chart */
+        font-size: 12px;
+        font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Verdana', Arial, sans-serif;
+        background: #191919;
+        background: #2e2e2e;
+
+        height: 100%;
+        width: 100%;
+        margin: 5px;
+        padding: 0px;
+}
+  
+  .ui-tooltip-container {
+    background-color:  #1E1E1E !important;
+    color: #AAAAAA !important;
+  }
+
+  
+.WinChartFrame {
+    /* -webkit-app-region: drag; */
+    background-color: #353434;
+    background-color: #e0a910;
+    background-color: #1E1E1E;
+    /* color: rgb(48, 141, 247) !important; */
+    /* border-style: solid;
+    border-color: rgb(48, 141, 247);
+    border-width: 2px; */
+    width: 100%;
+    height: 100%;
+    /* display: grid;
+    grid-gap: 2px;
+    align-items: center;
+    grid-template-columns: 1fr minmax(150px, 1fr);
+    grid-template-rows: 1fr; */
+  
+    /* grid-template-columns: 2fr 1fr; */
+    /* grid-template-columns: 1fr; */
+    /* grid-template-columns: minmax(250px, 1fr)  1fr ; */
+  }
+  

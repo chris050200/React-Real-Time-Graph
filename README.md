@@ -1,4 +1,4 @@
-### Real Time Chart in React
+### Real Time Chart for React
 
 ```
 cd realtimechart    

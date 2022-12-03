@@ -2,5 +2,6 @@
 <br/>
 cd realtimegraph <br/>
 npm install <br/>
-npm start
+npm start <br/>
+![alt text](https://github.com/chris050200/React-Real-Time-Graph/blob/main/Capture.JPG?raw=true)
 

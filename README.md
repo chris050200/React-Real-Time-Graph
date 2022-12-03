@@ -1,3 +1,5 @@
+# Real Time Chart in React
+
 ```
 cd realtimechart    
 npm install    
